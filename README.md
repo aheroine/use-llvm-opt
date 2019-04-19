@@ -1,5 +1,6 @@
 # Passes for LLVM operations from MACKE
 
+from macke-opt-llvm
 
 ## How to build the project?
 
