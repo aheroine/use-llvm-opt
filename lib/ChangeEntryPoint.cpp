@@ -85,8 +85,10 @@ struct ChangeEntryPoint : public llvm::ModulePass {
       // If an old main exist, rename it ...
       oldmain->setName("__main_old");
     }
-    //newentryfunc->setName("main");
+    newentryfunc->setName("main");
     // jl modify:just rename , not check validation
+    //maybe not verify and change the function name directly will lead some problem
+	/*
     // Check, if signature can be used as main function
     if (!hasValidMainType(newentryfunc)) {
       llvm::errs() << "Error: " << NewEntryFunction
@@ -118,7 +120,7 @@ struct ChangeEntryPoint : public llvm::ModulePass {
     }
 
     llvm::outs() << "New entry point set to " << NewEntryFunction << '\n';
-
+*/
     return true;  // This module was modified 
   }
 };
