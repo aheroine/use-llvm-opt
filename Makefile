@@ -1,5 +1,5 @@
 # These are the only three external values to be set
-LLVM_SRC_PATH ?= $$HOME/deploy/llvm342/
+LLVM_SRC_PATH ?= $$HOME/deploy/llvm/
 KLEE_BUILDDIR ?= $$HOME/deploy/klee22/Release+Asserts
 KLEE_INCLUDES ?= $$HOME/deploy/klee22/include/
 
